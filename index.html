@@ -1,15 +1,61 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PageSpeed Test</title><meta name="description" content="Descrição otimizada da página"><meta name="robots" content="index, follow"></head><body>A casa é muito mais do que apenas um espaço físico. Ela é um lugar onde construímos memórias, cultivamos relacionamentos e encontramos conforto. Desde os tempos mais primordiais da humanidade, a casa tem sido um refúgio seguro, um abrigo contra os elementos e um espaço para a convivência comunitária.
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RixPlay</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000000;
+    }
+    h1 {
+        color: #FFFFFF;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        /* Reduz o tamanho da fonte para dispositivos mÃ³veis */
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    
+</style>
+</head>
+<body>
+<h1 id="playPhrase">D&ecirc; um Play na sua Vida</h1>
 
-A noção de casa varia culturalmente e ao longo do tempo. Em algumas culturas, a casa pode ser um complexo de várias gerações, onde avós, pais, filhos e netos vivem juntos sob o mesmo teto, enquanto em outras culturas, a casa pode ser mais nuclear, com apenas uma família imediata compartilhando o espaço. Além disso, a arquitetura e o design das casas refletem as tradições, os valores e o estilo de vida de uma sociedade específica.
+<script>
+    // FunÃ§Ã£o para determinar o idioma do navegador e exibir a frase correspondente
+    function exibirFrase() {
+        var lang = navigator.language || navigator.userLanguage;
+        var phrase;
 
-Independentemente das diferenças culturais, a casa desempenha papéis essenciais na vida das pessoas. É um lugar onde nos sentimos seguros e protegidos, onde podemos relaxar e ser nós mesmos. A casa é o palco de momentos importantes em nossas vidas, desde celebrações de aniversários e festas familiares até momentos de intimidade e reflexão.
+        switch(lang.substring(0, 2)) {
+            case 'pt':
+                phrase = "DÃª um Play na sua Vida";
+                break;
+            case 'es':
+                phrase = "Pon un Play en tu Vida";
+                break;
+            default:
+                phrase = "Play Your Life";
+                break;
+        }
 
-Além do aspecto emocional, a casa também é um investimento financeiro significativo para muitas pessoas. A compra de uma casa é muitas vezes considerada uma das maiores decisões financeiras que alguém pode fazer, e a propriedade imobiliária frequentemente serve como uma forma de acumular riqueza ao longo do tempo.
+        document.getElementById('playPhrase').textContent = phrase;
+    }
 
-No entanto, o conceito de casa vai além das paredes e dos móveis. Uma casa é também um espaço de autoexpressão, onde podemos mostrar nossa personalidade e interesses por meio da decoração e do estilo de vida que escolhemos adotar. É onde construímos nossas identidades individuais e familiares.
-
-Além disso, a casa está intrinsecamente ligada ao meio ambiente. Ela consome recursos naturais, consome energia e gera resíduos. Portanto, a forma como projetamos, construímos e mantemos nossas casas tem um impacto significativo no meio ambiente. Cada vez mais, existe uma ênfase na criação de casas sustentáveis, que minimizam seu impacto ambiental e promovem práticas de vida mais conscientes.
-
-Nos últimos anos, a pandemia de COVID-19 destacou ainda mais a importância da casa em nossas vidas. Com muitas pessoas passando mais tempo em casa devido a lockdowns e restrições, a casa se tornou não apenas um lugar de moradia, mas também de trabalho, educação e lazer. Isso levou muitos a repensar o papel e o design de suas casas para atender melhor às novas demandas.
-
-Em resumo, a casa é muito mais do que apenas um edifício. É um lugar de significado emocional, um investimento financeiro, um espaço de autoexpressão e um reflexo de nossos valores e estilo de vida. Cuidar de nossa casa, tanto física quanto emocionalmente, é fundamental para o nosso bem-estar e felicidade.</body></html>
+    // Chamada da funÃ§Ã£o ao carregar a pÃ¡gina
+    window.onload = exibirFrase;
+</script>
+</body>
+</html>
