@@ -13,9 +13,10 @@
     padding: 0;
     font-family: Poppins, Arial, sans-serif;
     background-color: black;
+    font-size: 20px;
   }
-  
-  .container {
+
+    .container {
     width: 90%;
     max-width: 900px;
     margin: 50px auto;
@@ -25,6 +26,52 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     color: black;
   }
+
+   .botao {
+        display: block;
+        width: 80%; /* 80% da largura da tela */
+        max-width: 600px; /* máximo de 400px para evitar que fique muito largo em telas muito grandes */
+            padding: 30px 40px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        /*background-color: #4CAF50;*/
+        background-image: linear-gradient(111deg, #FFCC3C 0%, #FFAE23 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        margin: auto; /* centralizar horizontalmente */
+        margin-top: 20px;
+    }
+
+ .pulse {
+      animation: pulse 1s 1s ease-in-out infinite;
+      animation: pulse 1s infinite;
+      }
+      @-webkit-keyframes pulse {
+      0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      }
+      70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      }
+      100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      }
+      }
+      @keyframes pulse {
+      0% {
+      transform: scale3d(1, 1, 1);
+      }
+      50% {
+      transform: scale3d(0.95, 0.95, 0.95);
+      }
+      100% {
+      transform: scale3d(1, 1, 1);
+      } 
+   }
 
   @media (max-width: 768px) {
     .container {
@@ -109,5 +156,10 @@
 <p>E hoje ganha dinheiro dormindo, e at&eacute; no banheiro. &Eacute; normal. Mesmo voc&ecirc; quisesse s&oacute; cem reais por dia ou mil reais por dia dez mil por m&ecirc;s assumir ou quinhentos degraus de uma escada o primeiro passo &eacute; o mesmo hoje &eacute; s&oacute; voc&ecirc; repetir se n&atilde;o fizer algo agora uma crian&ccedil;a que nasceu ontem logo vai aprender isso daqui e vai passar voc&ecirc; seus amigos da escola seu vizinho ou algu&eacute;m da sua fam&iacute;lia vai passar voc&ecirc; como voc&ecirc; se sente agora que sabe que tamb&eacute;m pode se voc&ecirc; s&oacute; tem celular e no sof&aacute; j&aacute; est&aacute; dentro ent&atilde;o cabe voc&ecirc; entrar e fazer acontecer uma apanha da vida tentando ir por v&aacute;rios caminhos que n&atilde;o te leva a lugar nenhum se for para errar &eacute; r&aacute;pido voc&ecirc; sabia que as pessoas t&ecirc;m mais medo de fazer algo que as impulsiona do que de morrer por isso vive uma vida sem gra&ccedil;a para sempre milh&otilde;es de pessoas n&atilde;o podem voltar no tempo para caixinhas que voc&ecirc; tem hoje em suas m&atilde;os por isso aproveita e aprenda junto o segredo da felicidade e l&aacute; do bom da vida lembra da quantidade de pessoas que voc&ecirc; viu minutos atr&aacute;s agora nesse exato minuto ela j&aacute; sabem menos que voc&ecirc; voc&ecirc; j&aacute; tem a capacidade e tudo que precisa para fazer isso &eacute; sentado no sof&aacute; da sua sala ou numa ilha no meio do nada tanto faz &eacute; s&oacute; isso que voc&ecirc; precisa fazer agora e o melhor voc&ecirc; s&oacute; precisa do acesso e de resultado r&aacute;pido para voc&ecirc; dinheiro tem problema problemas foram feitos para resolver se voc&ecirc; tem d&uacute;vida pense nas possibilidades corra o risco se voc&ecirc; n&atilde;o tem dinheiro voc&ecirc; vai ter mais se voc&ecirc; n&atilde;o tem tempo vai ter muito mais tempo por isso economize dinheiro entrando agora economize tempo na sua vida e volta todo o tempo que voc&ecirc; j&aacute; perdeu na internet e transforme cada segundo em dinheiro seja o primeiro sempre esse m&eacute;todo f&aacute;cil &eacute; s&oacute; o in&iacute;cio voc&ecirc; n&atilde;o precisa fazer quase nada s&oacute; v&iacute;deo e ver com seus pr&oacute;prios olhos e n&atilde;o precisa nem ser voc&ecirc; pode pedir para outro fazer reinicia a sua vida agora ou nunca a &uacute;nica chance que voc&ecirc; tem de n&atilde;o se preocupar com dinheiro em poder desfrutar das coisas boas da vida que voc&ecirc; merece sen&atilde;o voc&ecirc; vai ter a culpa de que podia ter tomado uma decis&atilde;o hoje, mas n&atilde;o fez.</p>
 <p>S&oacute; entre e fa&ccedil;a algo novo na vida, diferente, antes que essa nova oportunidade se feche e voc&ecirc; perca pra sempre. Seja livre pra ser quem voc&ecirc; quiser, ou pague o pre&ccedil;o caro a vida vai te cobrar se voc&ecirc; n&atilde;o fizer nada agora. Acesse agora.</p>
 
+
+
+    <a href="https://sun.eduzz.com/2367203?src=leia" class="botao delay pulse">EU QUERO AGORA</a>
+    
+    <span class="delay" style="color: #FFFFFF;">Oferta por tempo limitado</span>
 
 </html>
