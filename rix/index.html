@@ -298,6 +298,18 @@ setTimeout(function() {
     </script>
 
     <script>
+window.addEventListener('load', function() {
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function() {
+        history.pushState(null, null, document.URL);
+        // Redirecionar para outra página
+        window.location.replace("/back");
+    });
+});
+</script>
+
+<!--
+    <script>
       function backquente(){
           back_redirect_back_link = '/back';
           history['pushState']({}, '', location['href']);
@@ -310,6 +322,7 @@ setTimeout(function() {
       }
       setTimeout("backquente()", 1); /* 300000 5min*/
    </script>
+-->
 
 <script>
 // Função para obter a data atual no formato desejado (dia/mês)
