@@ -307,7 +307,7 @@ setTimeout(function() {
                 },
                 hasChanged: function() {
                     if (b.location.hash == "#no-back") {
-                        b.location.hash = "#";
+                        b.location.hash = "";
                         b.location.href = "https://rixplay.com/rix/back";
                     }
                 },
@@ -327,7 +327,7 @@ setTimeout(function() {
                         if (this.history_api) {
                             history.pushState(null, "", "#");
                         } else {
-                            b.location.hash = "#";
+                            b.location.hash = "";
                             b.location.href = "https://rixplay.com/rix/back";
                         }
                     }
