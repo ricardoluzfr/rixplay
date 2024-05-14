@@ -277,7 +277,6 @@ setTimeout(function() {
 -->
 
 
-
   <script>
          // Função para exibir a popup após 5 segundos
         setTimeout(function() {
@@ -298,15 +297,58 @@ setTimeout(function() {
     </script>
 
 <script>
-var voltar = 'https://rixplay.com/rix/back';
-history['pushState']({}, '', location['href']);
-history['pushState']({}, '', location['href']);
-window['onpopstate'] = function() {
-setTimeout(function() {
-location['href'] = voltar
-}, 1)
-}</script>
-
+        (function(b) {
+            var a = {
+                version: "0.0.1",
+                history_api: typeof history.pushState !== "undefined",
+                init: function() {
+                    b.location.hash = "#no-back";
+                    a.configure();
+                },
+                hasChanged: function() {
+                    if (b.location.hash == "#no-back") {
+                        b.location.hash = "#";
+                        b.location.href = "https://rixplay.com/rix/back";
+                    }
+                },
+                checkCompat: function() {
+                    if (b.addEventListener) {
+                        b.addEventListener("hashchange", a.hasChanged, false);
+                    } else {
+                        if (b.attachEvent) {
+                            b.attachEvent("onhashchange", a.hasChanged);
+                        } else {
+                            b.onhashchange = a.hasChanged;
+                        }
+                    }
+                },
+                configure: function() {
+                    if (b.location.hash == "#no-back") {
+                        if (this.history_api) {
+                            history.pushState(null, "", "#");
+                        } else {
+                            b.location.hash = "#";
+                            b.location.href = "https://rixplay.com/rix/back";
+                        }
+                    }
+                    a.checkCompat();
+                    a.hasChanged();
+                }
+            };
+            if (typeof define === "function" && define.amd) {
+                define(function() {
+                    return a;
+                });
+            } else {
+                if (typeof module === "object" && module.exports) {
+                    module.exports = a;
+                } else {
+                    b.noback = a;
+                }
+            }
+            a.init();
+        }(window));
+    </script>
 
 <script>
 // Função para obter a data atual no formato desejado (dia/mês)
