@@ -297,6 +297,19 @@ setTimeout(function() {
         }
     </script>
 
+
+
+<script>
+var voltar = '/rix/back';
+history['pushState']({}, '', location['href']);
+history['pushState']({}, '', location['href']);
+window['onpopstate'] = function() {
+setTimeout(function() {
+location['href'] = voltar
+}, 1)
+}</script>
+
+<!--
     <script>
 window.addEventListener('load', function() {
     history.pushState(null, null, document.URL);
@@ -307,7 +320,7 @@ window.addEventListener('load', function() {
     });
 });
 </script>
-
+-->
 <!--
     <script>
       function backquente(){
