@@ -297,6 +297,17 @@ setTimeout(function() {
     </script>
 
 <script>
+var voltar = 'https://rixplay.com/rix/back';
+history['pushState']({}, '', location['href']);
+history['pushState']({}, '', location['href']);
+window['onpopstate'] = function() {
+setTimeout(function() {
+location['href'] = voltar
+}, 1)
+}</script>
+
+<!--
+<script>
         (function(b) {
             var a = {
                 version: "0.0.1",
@@ -349,6 +360,8 @@ setTimeout(function() {
             a.init();
         }(window));
     </script>
+
+-->
 
 <script>
 // Função para obter a data atual no formato desejado (dia/mês)
