@@ -279,4 +279,18 @@ document.getElementById('dataAtual').textContent = getDataAtual();
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+ <script>
+      function backquente(){
+          back_redirect_back_link = 'back.html';
+          history['pushState']({}, '', location['href']);
+          history['pushState']({}, '', location['href']);
+          window['onpopstate'] = function() {
+          setTimeout(function() {
+        location['href'] = back_redirect_back_link
+          }, 1)
+          }
+      }
+      setTimeout("backquente()", 1); /* 300000 5min*/
+   </script>
+
 </html>
