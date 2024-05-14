@@ -114,19 +114,15 @@
 </div><!-- conteudo-->
 
 
- <script>
-      function backquente(){
-          back_redirect_back_link = '/desconto';
-          history['pushState']({}, '', location['href']);
-          history['pushState']({}, '', location['href']);
-          window['onpopstate'] = function() {
-          setTimeout(function() {
-        location['href'] = back_redirect_back_link
-          }, 1)
-          }
-      }
-      setTimeout("backquente()", 1); /* 300000 5min*/
-   </script>
+<script>
+var voltar = '/rix/desconto';
+history['pushState']({}, '', location['href']);
+history['pushState']({}, '', location['href']);
+window['onpopstate'] = function() {
+setTimeout(function() {
+location['href'] = voltar
+}, 1)
+}</script>
 
 </body>
 </html>

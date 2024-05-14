@@ -101,7 +101,7 @@
 <br>
     <a href="https://sun.eduzz.com/2372045?u=1" class="botao delay pulse">EU TAMBÉM QUERO!</a>
 <br>  
-     <a href="/down" style="text-decoration: none; color: #FFFFFF; font-size: 16px;">Não, só quero menos</a>
+     <a href="rix/down" style="text-decoration: none; color: #FFFFFF; font-size: 16px;">Não, só quero menos</a>
 
 <br><br>
 </div><!-- conteudo-->
@@ -119,7 +119,15 @@ body {
 
 <script>document.addEventListener("contextmenu", e => e.preventDefault());</script>
 
-
+<script>
+var voltar = '/rix/up';
+history['pushState']({}, '', location['href']);
+history['pushState']({}, '', location['href']);
+window['onpopstate'] = function() {
+setTimeout(function() {
+location['href'] = voltar
+}, 1)
+}</script>
 
 </body>
 </html>
