@@ -75,11 +75,13 @@ src="https://www.facebook.com/tr?id=721558839910371&ev=PageView&noscript=1"
     font-weight: normal;
     padding: 10px;
 }
+
+.logo { width: 120px; }
         
         h1 {
             font-size: 2.5em;
             color: #FFFFFF;
-                margin: 0;
+            margin: 0;
             line-height: 1.2em;
             font-weight: normal;
         }
@@ -133,7 +135,7 @@ src="https://www.facebook.com/tr?id=721558839910371&ev=PageView&noscript=1"
         text-align: center;
         background-color: #FFD700;
         /*background-image: linear-gradient(111deg, #FFCC3C 0%, #FFD700 100%);*/
-        color: #07102E;
+        color: /*#07102E;*/#000000;
         border: none;
         border-radius: 8px;
         text-decoration: none;
@@ -190,12 +192,14 @@ src="https://www.facebook.com/tr?id=721558839910371&ev=PageView&noscript=1"
         @media only screen and (max-width: 600px) {
         /* Reduz o tamanho da fonte para dispositivos móveis */
         h1 {
-            font-size: 1.3em;
+            font-size: 1.5em;
             padding: 2px;
         }
+        .logo { width: 80px; }
         .comentarios { padding: 5px; }
         .subtitulo { font-size: 1.4em; }
         .preco { color: #FFFFFF; font-size: 20px; }
+
     }
 
     </style>
@@ -211,11 +215,11 @@ ATÉ HOJE <span id="dataAtual"></span>
 <div class="conteudo">
 
     <center>
-        <img src="img/logo.jpg" border="0" width="120">
+        <img class="logo" src="img/logo.jpg" border="0">
     </center>
 
 <h1>
-<b>Descubra</b> Como Ganhar<br>
+Descubra <b>Como</b> Ganhar<br>
 Até <b>R$ 1.000,00</b> Por Dia<br>
 Com 1 Playbook <b>Automático</b>
 </h1>
@@ -230,7 +234,7 @@ Com 1 Playbook <b>Automático</b>
 <p>
  <span class="preco delay">DE R$ <s>1.997,00</s> <b>HOJE</b> SÓ 12x R$ <b>29,90</b></span>
 
-    <a href="https://sun.eduzz.com/2367203" class="botao delay pulse">EU TAMBÉM QUERO</a>
+    <a href="https://sun.eduzz.com/2367203" class="botao delay pulse">EU TAMBÉM QUERO!</a>
     
     <span class="delay" style="color: #FFFFFF;">*menos de 0,99 por dia</span>
 
