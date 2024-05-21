@@ -53,13 +53,12 @@ src="https://www.facebook.com/tr?id=1475091023090754&ev=PageView&noscript=1"
 
 
         body {
-              font-family: "Poppins", "Arial", sans-serif;
-            background-color: /*#07102E;*/#4285F4;
+            font-family: "Poppins", "Arial", sans-serif;
+            background-color: #4285F4;
             margin: 0;
             padding: 10px;
             text-align: center;
-            /* nao selecionar */
-
+            
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -148,28 +147,51 @@ src="https://www.facebook.com/tr?id=1475091023090754&ev=PageView&noscript=1"
    }
        .botao {
         display: block;
-        width: 80%; /* 80% da largura da tela */
-        max-width: 600px; /* máximo de 400px para evitar que fique muito largo em telas muito grandes */
-            padding: 30px 40px;
+        width: 80%;
+        max-width: 600px;
+        padding: 30px 40px;
         font-size: 30px;
         font-weight: bold;
         text-align: center;
-        background-color: #FFD700;
-        /*background-image: linear-gradient(111deg, #FFCC3C 0%, #FFD700 100%);*/
-        color: /*#07102E;*/#000000;
+        background-color: #FFA500;
+        color: #FFFFFF;
         border: none;
         border-radius: 8px;
         text-decoration: none;
         cursor: pointer;
-        margin: auto; /* centralizar horizontalmente */
+        margin: auto;
     }
 
     .preco { color: #FFFFFF; font-size: 2em; }
 
+    }
+        #comments-section {
+              margin-top: 20px;
+        }
+        .comment {
+            margin: 10px auto;
+            padding: 15px;
+            width: 80%;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: left;
+        }
+        .comment p {
+            margin: 5px 0;
+        }
+        .comment strong {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+            text-align: right;
+        }
+    
+
      .botaosair {
         display: block;
-        width: 80%; /* 80% da largura da tela */
-        max-width: 600px; /* máximo de 400px para evitar que fique muito largo em telas muito grandes */
+        width: 80%;
+        max-width: 600px;
         padding: 30px 40px;
         font-size: 20px;
         font-weight: bold;
@@ -180,11 +202,11 @@ src="https://www.facebook.com/tr?id=1475091023090754&ev=PageView&noscript=1"
         border-radius: 8px;
         text-decoration: none;
         cursor: pointer;
-        margin: auto; /* centralizar horizontalmente */
+        margin: auto;
 
     }
 
-        /* Estilos para a popup */
+        
     .popup {
         display: none;
         position: fixed;
@@ -198,7 +220,7 @@ src="https://www.facebook.com/tr?id=1475091023090754&ev=PageView&noscript=1"
         z-index: 9999;
     }
 
-    /* Estilos para o fundo escuro */
+    
     .overlay {
         display: none;
         position: fixed;
@@ -211,7 +233,7 @@ src="https://www.facebook.com/tr?id=1475091023090754&ev=PageView&noscript=1"
     }
 
         @media only screen and (max-width: 600px) {
-        /* Reduz o tamanho da fonte para dispositivos móveis */
+        
         h1 {
             font-size: 1.2em;
             
@@ -255,28 +277,69 @@ Conhecimento em <u>Lucro Rápido</u>
 <div style="width:100%; height: 45px; position: relative; background: transparet; margin-top: -45px;"></div>
 
 <p>
- <span class="preco delay">DE R$ <s>1.497,00</s> <b>HOJE</b> SÓ 12x R$ <b>24,90</b></span>
+ <span class="preco delay">DE R$ <s>1.790,00</s> <b><u>HOJE</u></b> SÓ 12x R$ 24,90</span>
 
-    <a href="https://sun.eduzz.com/2367203" class="botao delay pulse">QUERO FAZER PARTE</a>
+    <a href="https://sun.eduzz.com/2367203" class="botao delay pulse">QUERO MEU ACESSO</a>
     
-    <span class="delay" style="color: #FFFFFF;">*menos de 0,83 por dia</span>
+    <span class="delay" style="color: #FFFFFF;">Última Chance</span>
 
 </div><!-- conteudo-->
 
 <div class="comentarios">
 
 <div class="delay">
-<div class="shoutout-embed" data-widgetTitle="RixPlay" data-widgetId="84d699e7-dee2-4727-b9c1-91e01278c917"></div>
-<script class="shoutout-script" src="https://shoutout.io/static/website/js/embed.js" defer></script>
 
-<div style="z-index: 2; width:100%; height: 60px; position: relative; background: #000000; margin-top: -60px;"></div>
+     <div id="comments-section">
+        <!-- <h2>Depoimentos de Alunos</h2> -->
+        <div class="comment">
+            <p>"Este treinamento mudou minha vida! Agora, estou ganhando muito mais com meus eBooks."</p>
+            <p><strong>- João Silva</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Simplesmente incrível! As técnicas ensinadas são práticas e eficazes."</p>
+            <p><strong>- Maria Fernandes</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Recomendo a todos que querem aumentar suas vendas online."</p>
+            <p><strong>- Pedro Costa</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Um conteúdo muito rico e detalhado. Vale cada centavo."</p>
+            <p><strong>- Ana Souza</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Finalmente consegui entender como vender meus eBooks de forma eficaz."</p>
+            <p><strong>- Lucas Almeida</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Melhor investimento que fiz este ano! As estratégias realmente funcionam."</p>
+            <p><strong>- Bianca Lima</strong></p>
+        </div>
+        <div class="comment">
+            <p>"O suporte ao cliente é excelente e sempre disponível para ajudar."</p>
+            <p><strong>- Carlos Pereira</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Já recuperei o valor investido em poucas semanas."</p>
+            <p><strong>- Juliana Rocha</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Conteúdo direto ao ponto e muito bem explicado."</p>
+            <p><strong>- Rafael Santos</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Superou minhas expectativas. Muito obrigado!"</p>
+            <p><strong>- Fernanda Ribeiro</strong></p>
+        </div>
+    </div>
+
 </div>
 
 
-    <a href="https://sun.eduzz.com/2367203?src=bt2" style="background: #007aff; color: #FFFFFF; position: relative; z-index:10; margin-top: -50px;" class="botao delay">EU TAMBÉM QUERO</a>
+    <a href="https://sun.eduzz.com/2367203?src=bt2" style="background: #25D366; color: #FFFFFF; position: relative; z-index:10; margin-bottom: 10px;" class="botao delay pulse">QUERO FAZER PARTE</a>
 </div><!--comentarios-->
 
-<div style="font-weight: normal; font-size: 12px; color: #333333; text-decoration:none; padding:20px;">RIX © 2024<br><a target="_blank" style="color: #333333; text-decoration:none;" href="https://rixplay.com/rix/termos">Termos de Uso</a></div>
+<div style="font-family: Poppins, Arial, sans-serif;  font-size: 12px; color: #FFFFFF; text-decoration:none; padding:0px;">RIX © 2024<br><a target="_blank" style="color: #FFFFFF; text-decoration:none;" href="https://rixplay.com/rix/termos">Termos de Uso</a></div>
 
     </div> <!-- container -->
 
@@ -313,7 +376,7 @@ Conhecimento em <u>Lucro Rápido</u>
 <script>    
 setTimeout(function() {
   $('.delay').fadeIn();
-}, 540000 ); /* 540000 9 min*/
+}, 0 ); /* 540000 9 min*/
 </script>
 
 
