@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RixPlay</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<link rel="preload" href="https://sun.eduzz.com/2367203" as="document">
+
+
+<!-- Meta Pixel Code R -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '721558839910371');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=721558839910371&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <!-- Meta Pixel Code F-->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1475091023090754');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1475091023090754&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <style>
+
+
+        body {
+            font-family: "Poppins", "Arial", sans-serif;
+            background-color: /*#4285F4;*/#0057FF;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+        }
+
+        html {
+    scroll-behavior: smooth;
+ }
+        
+        .conteudo {
+            max-width: 800px;
+            margin: 0px auto;
+            margin-top: 20px;
+       
+   
+        }
+
+        .comentarios {
+            max-width: 100%;
+            padding-left: 100px;
+            padding-right: 100px;
+            z-index: 1;
+            margin-top:10px;
+        }
+.mensagem {
+   
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.logo { width: 90px; }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #FFFFFF;
+            margin: 0;
+            line-height: 1.2em;
+            font-weight: normal;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+         .subtitulo { 
+            position: relative;
+         margin-top: 0;                   
+            font-size: 1.5em; margin: 0; color: #ff007f; /* #ffa500rgba(255,79,0,1)*/
+            font-style: italic;
+
+        }
+
+          .destaque {
+        background-color: #FFCC3C;
+        color: #07102E;
+        padding: 0 5px; 
+    }
+        
+         .pulse {
+      animation: pulse 1s 1s ease-in-out infinite;
+      animation: pulse 1s infinite;
+      }
+      @-webkit-keyframes pulse {
+      0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+      }
+      70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      }
+      100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+      }
+      }
+      @keyframes pulse {
+      0% {
+      transform: scale3d(1, 1, 1);
+      }
+      50% {
+      transform: scale3d(0.95, 0.95, 0.95);
+      }
+      100% {
+      transform: scale3d(1, 1, 1);
+      } 
+   }
+       .botao {
+        display: block;
+        width: 80%;
+        max-width: 600px;
+        padding: 30px 40px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #FFA500;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        margin: auto;
+    }
+
+    .preco { color: #FFFFFF; font-size: 2em; }
+
+    }
+        #comments-section {
+              margin-top: 20px;
+        }
+        .comment {
+            margin: 10px auto;
+            padding: 15px;
+            width: 80%;
+            max-width: 600px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: left;
+        }
+        .comment p {
+            margin: 5px 0;
+        }
+        .comment strong {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+            text-align: right;
+        }
+    
+
+     .botaosair {
+        display: block;
+        width: 80%;
+        max-width: 600px;
+        padding: 30px 40px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        margin: auto;
+
+    }
+
+        
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9998;
+    }
+
+        @media only screen and (max-width: 600px) {
+        
+        h1 {
+            font-size: 1.2em;
+            
+        }
+        .logo { width: 80px; }
+        .comentarios { padding: 5px; }
+        .subtitulo { font-size: 1.2em; }
+        .preco { color: #FFFFFF; font-size: 20px; }
+
+    }
+
+    </style>
+</head>
+<body>
+
+<!--
+<div class="mensagem">
+ATÉ HOJE <span id="dataAtual"></span>
+</div>
+-->
+
+<div class="conteudo">
+
+    <center>
+        <!-- <img class="logo" src="img/logo.jpg" border="0"> -->
+    </center>
+
+
+<h1>
+Descubra o Único Método
+para <b>Aumentar Sua Renda</b>
+e Transforme seu
+Conhecimento em <b>Até 10 Mil</b>
+</h1>
+
+<p>
+
+        
+<script src="https://fast.wistia.com/embed/medias/6vre1ueni7.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_6vre1ueni7 seo=true videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/6vre1ueni7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
+
+<div style="width:100%; height: 45px; position: relative; background: transparet; margin-top: -45px;"></div>
+
+<p>
+ <span class="preco delay">DE R$ <s>2.490,00</s> <b><u>HOJE</u></b> SÓ 12x R$ 24,90</span>
+
+    <a href="https://sun.eduzz.com/2367203" class="botao delay pulse">EU QUERO AGORA!</a>
+    
+    <span class="delay" style="color: #FFFFFF;">Últimas Vagas Com Desconto</span>
+
+</div><!-- conteudo-->
+
+<div class="comentarios">
+
+<div class="delay">
+
+     <div id="comments-section">
+        <!-- <h2>Depoimentos de Alunos</h2> -->
+        <div class="comment">
+            <p>"Este treinamento mudou minha vida! Agora, estou ganhando muito mais com meus eBooks."</p>
+            <p><strong>- João Silva</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Simplesmente incrível! As técnicas ensinadas são práticas e eficazes."</p>
+            <p><strong>- Maria Fernandes</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Recomendo a todos que querem aumentar suas vendas online."</p>
+            <p><strong>- Pedro Costa</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Um conteúdo muito rico e detalhado. Vale cada centavo."</p>
+            <p><strong>- Ana Souza</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Finalmente consegui entender como vender meus eBooks de forma eficaz."</p>
+            <p><strong>- Lucas Almeida</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Melhor investimento que fiz este ano! As estratégias realmente funcionam."</p>
+            <p><strong>- Bianca Lima</strong></p>
+        </div>
+        <div class="comment">
+            <p>"O suporte ao cliente é excelente e sempre disponível para ajudar."</p>
+            <p><strong>- Carlos Pereira</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Já recuperei o valor investido em poucas semanas."</p>
+            <p><strong>- Juliana Rocha</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Conteúdo direto ao ponto e muito bem explicado."</p>
+            <p><strong>- Rafael Santos</strong></p>
+        </div>
+        <div class="comment">
+            <p>"Superou minhas expectativas. Muito obrigado!"</p>
+            <p><strong>- Fernanda Ribeiro</strong></p>
+        </div>
+    </div>
+
+</div>
+
+
+    <a href="https://sun.eduzz.com/2367203?src=bt2" style="background: #25D366; color: #FFFFFF; position: relative; z-index:10; margin-bottom: 10px;" class="botao delay pulse">QUERO FAZER PARTE</a>
+</div><!--comentarios-->
+
+<div style="font-family: Poppins, Arial, sans-serif;  font-size: 12px; color: #FFFFFF; text-decoration:none; padding:0px;">RIX © 2024<br><a target="_blank" style="color: #FFFFFF; text-decoration:none;" href="https://rixplay.com/rix/termos">Termos de Uso</a></div>
+
+    </div> <!-- container -->
+
+ <!-- Popup -->
+    <div class="popup" id="exitPopup">
+        <p><b><span style="font-size: 2.5em;">ESPERE!</span></b><br>Essa Chance Não Vai Mais Aparecer Pra Você!</p>
+        <button class="botaosair" onclick="closePopup()">ASSISTIR AGORA</button>
+<p>
+        <a href="https://rixplay.com/rix/leia">ou Leia Aqui a Versão Texto</a>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+ $('.delay').hide();
+         window._wq = window._wq || [];
+         _wq.push({
+           id: "6vre1ueni7",
+           onReady: function(video) {
+              video.bind('secondchange', function(s) {
+               if (s >= 528 ) /*529*/
+               {
+            $('.delay').fadeIn();
+           }
+           
+         });
+           }
+         });
+         
+      </script>
+
+
+<script>    
+setTimeout(function() {
+  $('.delay').fadeIn();
+}, 0 ); /* 540000 9 min*/
+</script>
+
+
+
+  <script>
+         // Função para exibir a popup após 5 segundos
+        setTimeout(function() {
+            document.addEventListener("mouseleave", function(e){
+                if (e.clientY <= 0) {
+                    document.getElementById('exitPopup').style.display = 'block';
+                    document.getElementById('overlay').style.display = 'block';
+                   /* document.getElementById('exitLink').href = 'https://rixplay.com'; */ // URL de saída desejada
+                }
+            });
+        }, 5000); // 5 segundos em milissegundos
+
+        // Função para fechar a popup
+        function closePopup() {
+            document.getElementById('exitPopup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+<script>
+var voltar = 'https://rixplay.com/rix/back';
+history['pushState']({}, '', location['href']);
+history['pushState']({}, '', location['href']);
+window['onpopstate'] = function() {
+setTimeout(function() {
+location['href'] = voltar
+}, 1)
+}</script>
+
+<!--
+<script>
+        (function(b) {
+            var a = {
+                version: "0.0.1",
+                history_api: typeof history.pushState !== "undefined",
+                init: function() {
+                    b.location.hash = "#no-back";
+                    a.configure();
+                },
+                hasChanged: function() {
+                    if (b.location.hash == "#no-back") {
+                        b.location.hash = "";
+                        b.location.href = "https://rixplay.com/rix/back";
+                    }
+                },
+                checkCompat: function() {
+                    if (b.addEventListener) {
+                        b.addEventListener("hashchange", a.hasChanged, false);
+                    } else {
+                        if (b.attachEvent) {
+                            b.attachEvent("onhashchange", a.hasChanged);
+                        } else {
+                            b.onhashchange = a.hasChanged;
+                        }
+                    }
+                },
+                configure: function() {
+                    if (b.location.hash == "#no-back") {
+                        if (this.history_api) {
+                            history.pushState(null, "", "#");
+                        } else {
+                            b.location.hash = "";
+                            b.location.href = "https://rixplay.com/rix/back";
+                        }
+                    }
+                    a.checkCompat();
+                    a.hasChanged();
+                }
+            };
+            if (typeof define === "function" && define.amd) {
+                define(function() {
+                    return a;
+                });
+            } else {
+                if (typeof module === "object" && module.exports) {
+                    module.exports = a;
+                } else {
+                    b.noback = a;
+                }
+            }
+            a.init();
+        }(window));
+    </script>
+
+-->
+
+<script>
+// Função para obter a data atual no formato desejado (dia/mês)
+function getDataAtual() {
+    var data = new Date();
+    var dia = data.getDate();
+    var mes = data.getMonth() + 1; // Adiciona 1 porque os meses começam em 0
+    if (mes < 10) {
+        mes = '0' + mes; // Adiciona um zero ao mês se ele for menor que 10
+    }
+    var dataFormatada = dia + '/' + mes;
+    return dataFormatada;
+}
+
+// Atualiza o elemento HTML com a data atual
+document.getElementById('dataAtual').textContent = getDataAtual();
+</script>
+
+<!-- hotjar -->
+
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3857078,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J10NNZSNKF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J10NNZSNKF');
+</script>
+
+<!--
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script> -->
+
+<script>document.addEventListener("contextmenu", e => e.preventDefault());</script>
+
+<!--navegg -->
+<script id="navegg" type="text/javascript">
+  (function(n,v,g){o="Navegg";if(!n[o]){
+    a=v.createElement('script');a.src=g;b=document.getElementsByTagName('script')[0];
+    b.parentNode.insertBefore(a,b);n[o]=n[o]||function(parms){
+    n[o].q=n[o].q||[];n[o].q.push([this, parms])};}})
+  (window, document, 'https://tag.navdmp.com/universal.min.js');
+  window.naveggReady = window.naveggReady||[];
+  window.nvg91577 = new Navegg({
+    acc: 91577
+  });
+</script>
+
+<!--     
+
+
+<body onload="checkCookie()"></body>
+
+   <script>
+      function setCookie(cname,cvalue,exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*48*60*60*1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      
+      function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+      
+      function checkCookie() {
+        let user = getCookie("user");
+        if (user != "") {
+ $('.texto').hide();
+ $('.espaco').hide();
+              $('.botao').fadeIn();
+              $('.delay').fadeIn();
+          } else {
+      document.cookie = "user=ok;";
+      
+           }
+        }      
+   </script>
+  
+   -->
+
+
+</body>
+</html>
