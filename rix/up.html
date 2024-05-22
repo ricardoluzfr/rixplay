@@ -22,6 +22,10 @@
             margin: 0;
             padding: 0;
             text-align: center;
+
+             -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
         }
 
         html {
@@ -56,6 +60,7 @@
     color: #fff;
     text-align: center;
     font-size: 18px;
+    padding: 10px;
 }
       
 
@@ -82,7 +87,7 @@
 <img src="img/up.png" border="0" width="100%"></img>
 
 <br><br>
-   <span style="color: #000000; font-size: 24px;">de R$ <s>1.997,00</s> por só 12x R$ 24,90</span>
+   <span style="color: #000000; font-size: 20px;">de R$ <s>1.997,00</s> por só 12x R$ 24,90</span>
 <br><br>
    
    <div style="text-align:center">
@@ -92,19 +97,11 @@
             let nextUpsellURL = "";
             let nextDownsellURL = "https://rixplay.com/rix/down";</script><script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
 
-<br><br>
+<br>
 </div><!-- conteudo-->
 
 
 
-<style>
-/* nao selecionar */
-body {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
-</style>
 
 <script>document.addEventListener("contextmenu", e => e.preventDefault());</script>
 
