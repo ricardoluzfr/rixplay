@@ -34,96 +34,98 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
 
     <style>
         body {
-            font-family: "Poppins", "Arial", sans-serif;
-            background-color: /*#4285F4;*/#000000;
-            margin: 0;
-            padding: 10px;
-            text-align: center;
-            
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-        }
+        font-family: "Poppins", "Arial", sans-serif;
+        background-color:#000000; /*#4285F4;*/            
+        margin: 0;
+        padding: 0px;
+        text-align: center;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 
-        html {
-    scroll-behavior: smooth;
- }
-        .conteudo {
-            max-width: 800px;
-            margin: 0px auto;
-            margin-top: 20px;
-          
-        }
+    html {
+        scroll-behavior: smooth;
+    }
+    .conteudo {
+        max-width: 800px;
+        margin: 0px auto;
+        margin-top: 20px;
+    }
 
-        .comentarios {
-            max-width: 100%;
-            padding-left: 100px;
-            padding-right: 100px;
-            z-index: 1;
-            margin-top:10px;
-        }
-.mensagem {
-   
-    background-color: #ff0000;
-    color: #fff;
-    text-align: center;
-    font-size: 18px;
-    font-weight: normal;
-    padding: 10px;
-}
+    .comentarios {
+        max-width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+        z-index: 1;
+        margin-top: 10px;
+    }
+    .mensagem {
 
-.logo { width: 90px; }
-        
-        h1 {
-            font-size: 2.5em;
-            color: #FFFFFF;
-            margin: 0;
-            line-height: 1.2em;
-            font-weight: normal;
-            margin-bottom: 0;
-            position: relative;
-        }
+        background-color: #ff0000;
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 10px;
+    }
 
-         .subtitulo { 
-            font-style: italic;
-            font-size: 1.5em; margin: 0; color: #ffffff;  /* #ff007f;#ffa500rgba(255,79,0,1)*/
-            position: relative;
-         margin-top: 10px;
-        }
+    .logo {
+        width: 90px;
+    }
 
-          .destaque {
+    h1 {
+        font-size: 2.5em;
+        color: #FFFFFF;
+        margin: 0;
+        line-height: 1.2em;
+        font-weight: normal;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    .subtitulo {
+        font-style: italic;
+        font-size: 1.5em;
+        margin: 0;
+        color: #FFFFFF;/* #ff007f;#ffa500rgba(255,79,0,1)*/        
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .destaque {
         background-color: #FFCC3C;
         color: #07102E;
-        padding: 0 5px; 
+        padding: 0 5px;
     }
-        
-         .pulse {
-      animation: pulse 1s 1s ease-in-out infinite;
-      animation: pulse 1s infinite;
-      }
-      @-webkit-keyframes pulse {
-      0% {
-      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-      }
-      70% {
-      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
-      }
-      100% {
-      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-      }
-      }
-      @keyframes pulse {
-      0% {
-      transform: scale3d(1, 1, 1);
-      }
-      50% {
-      transform: scale3d(0.95, 0.95, 0.95);
-      }
-      100% {
-      transform: scale3d(1, 1, 1);
-      } 
-   }
-       .botao {
+
+    .pulse {
+        animation: pulse 1s 1s ease-in-out infinite;
+        animation: pulse 1s infinite;
+    }
+    @-webkit-keyframes pulse {
+        0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        }
+        70% {
+            -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+        }
+        100% {
+            -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        }
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale3d(1, 1, 1);
+        }
+        50% {
+            transform: scale3d(0.95, 0.95, 0.95);
+        }
+        100% {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    .botao {
         display: block;
         width: 80%;
         max-width: 600px;
@@ -140,33 +142,37 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         margin: auto;
     }
 
-    .texto { color: #FFFFFF; font-size: 2em; margin:0; padding-bottom:0; line-height:1; }
-    
+    .texto {
+        color: #FFFFFF;
+        font-size: 2em;
+        margin: 0;
+        padding-bottom: 0;
+        line-height: 1;
     }
-        #comments-section {
-              margin-top: 20px;
-        }
-        .comment {
-            margin: 10px auto;
-            padding: 15px;
-            width: 80%;
-            max-width: 600px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            text-align: left;
-        }
-        .comment p {
-            margin: 5px 0;
-        }
-        .comment strong {
-            display: block;
-            margin-top: 10px;
-            font-weight: 600;
-            text-align: right;
-        }
-    
 
-     .botaosair {
+    }
+    #comments-section {
+        margin-top: 20px;
+    }
+    .comment {
+        margin: 10px auto;
+        padding: 15px;
+        width: 80%;
+        max-width: 600px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        text-align: left;
+    }
+    .comment p {
+        margin: 5px 0;
+    }
+    .comment strong {
+        display: block;
+        margin-top: 10px;
+        font-weight: 600;
+        text-align: right;
+    }
+    .botaosair {
         display: block;
         width: 80%;
         max-width: 600px;
@@ -181,10 +187,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         text-decoration: none;
         cursor: pointer;
         margin: auto;
-
     }
-
-        
     .popup {
         display: none;
         position: fixed;
@@ -197,8 +200,6 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         z-index: 9999;
     }
-
-    
     .overlay {
         display: none;
         position: fixed;
@@ -210,17 +211,24 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         z-index: 9998;
     }
 
-        @media only screen and (max-width: 600px) {
-        
+    @media only screen and (max-width: 600px) {
         h1 {
             font-size: 1.5em;
-            
         }
-        .logo { width: 80px; }
-        .comentarios { padding: 5px; }
-        .subtitulo { font-size: 1.2em; }
-        .texto { color: #FFFFFF; font-size: 20px; }
-            }
+        .logo {
+            width: 80px;
+        }
+        .comentarios {
+            padding: 5px;
+        }
+        .subtitulo {
+            font-size: 1.2em;
+        }
+        .texto {
+            color: #FFFFFF;
+            font-size: 20px;
+        }
+    }
 
     </style>
 </head>
