@@ -323,13 +323,13 @@ Até <b>10 Mil</b> No Mês
          
       </script>
 
-<!--
+
 <script>    
 setTimeout(function() {
   $('.delay').fadeIn();
 }, 0 ); /* 540000 9 min*/
 </script>
--->
+
 
 
 
@@ -367,22 +367,27 @@ location['href'] = voltar
 <script>
 (function(b) {
     var a = {
+        version: "0.0.1",
+        history_api: typeof history.pushState !== "undefined",
         init: function() {
+            b.location.hash = "#no-back";
             a.configure();
         },
         hasChanged: function() {
-            if (b.location.hash === "#no-back") {
-                b.location.hash = "";
-                if (!b.location.search) {
+            if (b.location.hash == "#no-back") {
+                b.location.hash = "#";
+                if (b.location.search == null || b.location.search == undefined || b.location.search == '') {
                     b.location.href = "https://rixplay.com/rix/back";
                 } else {
-                    if (b.location.search.indexOf("src") > -1) {
-                        var partes = b.location.search.slice(1).split('&');
+                    if (location.search.indexOf("src") > -1) {
+                        var partes = location.search.slice(1).split('&');
                         var data = {};
                         var new_search = '?';
                         partes.forEach(function(parte) {
                             var chaveValor = parte.split('=');
-                            data[chaveValor[0]] = chaveValor[1];
+                            var chave = chaveValor[0];
+                            var valor = chaveValor[1];
+                            data[chave] = valor;
                         });
                         data.src = data.src + "-->back_home";
                         new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=").replace(/[,]/g, "&");
@@ -396,31 +401,38 @@ location['href'] = voltar
         checkCompat: function() {
             if (b.addEventListener) {
                 b.addEventListener("hashchange", a.hasChanged, false);
-            } else if (b.attachEvent) {
-                b.attachEvent("onhashchange", a.hasChanged);
             } else {
-                b.onhashchange = a.hasChanged;
+                if (b.attachEvent) {
+                    b.attachEvent("onhashchange", a.hasChanged);
+                } else {
+                    b.onhashchange = a.hasChanged;
+                }
             }
         },
         configure: function() {
-            if (b.location.hash === "#no-back") {
-                b.location.hash = "";
-                if (!b.location.search) {
-                    b.location.href = "https://rixplay.com/rix/back";
+            if (b.location.hash == "#no-back") {
+                if (this.history_api) {
+                    history.pushState(null, "", "#");
                 } else {
-                    if (b.location.search.indexOf("src") > -1) {
-                        var partes = b.location.search.slice(1).split('&');
-                        var data = {};
-                        var new_search = '?';
-                        partes.forEach(function(parte) {
-                            var chaveValor = parte.split('=');
-                            data[chaveValor[0]] = chaveValor[1];
-                        });
-                        data.src = data.src + "-->back_home";
-                        new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=").replace(/[,]/g, "&");
-                        b.location.href = "https://sitedoredirecionamento.com" + new_search;
+                    if (b.location.search == null || b.location.search == undefined || b.location.search == '') {
+                        b.location.href = "https://rixplay.com/rix/back";
                     } else {
-                        b.location.href = "https://sitedoredirecionamento.com" + b.location.search + "&src=back";
+                        if (location.search.indexOf("src") > -1) {
+                            var partes = location.search.slice(1).split('&');
+                            var data = {};
+                            var new_search = '?';
+                            partes.forEach(function(parte) {
+                                var chaveValor = parte.split('=');
+                                var chave = chaveValor[0];
+                                var valor = chaveValor[1];
+                                data[chave] = valor;
+                            });
+                            data.src = data.src + "-->back_home";
+                            new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=").replace(/[,]/g, "&");
+                            b.location.href = "https://rixplay.com/rix/back" + new_search;
+                        } else {
+                            b.location.href = "https://rixplay.com/rix/back" + b.location.search + "&src=back";
+                        }
                     }
                 }
             }
@@ -432,14 +444,17 @@ location['href'] = voltar
         define(function() {
             return a;
         });
-    } else if (typeof module === "object" && module.exports) {
-        module.exports = a;
     } else {
-        b.noback = a;
+        if (typeof module === "object" && module.exports) {
+            module.exports = a;
+        } else {
+            b.noback = a;
+        }
     }
     a.init();
 }(window));
 </script>
+
 
 
 <!--
