@@ -265,7 +265,7 @@ Até <b>10 Mil</b> No Mês
 <p>
  <span class="texto delay">Até <b>HOJE</b> <span id="dataAtual"></span> Só 12x R$ <b>19,98</b></span>
 
-    <a href="https://pay.kiwify.com.br/6tn3Un2" class="botao delay">QUERO FAZER PARTE!</a>
+    <a id="redirectLink" href="https://pay.kiwify.com.br/6tn3Un2" class="botao delay">QUERO FAZER PARTE!</a>
     
     <!--<span class="delay" style="color: #FFFFFF;">R$ <s>1.997,00</s> <br>Última Chance Com Desconto</span> -->
 
@@ -324,12 +324,14 @@ Até <b>10 Mil</b> No Mês
       </script>
 
 <!--
+
 <script>    
 setTimeout(function() {
   $('.delay').fadeIn();
 }, 0 ); /* 540000 9 min*/
 </script>
 -->
+
 
 
 
@@ -352,6 +354,7 @@ setTimeout(function() {
         }
     </script>
 
+<!-- 
 <script>
 var voltar = 'https://rixplay.com/rix/back';
 history['pushState']({}, '', location['href']);
@@ -361,6 +364,45 @@ setTimeout(function() {
 location['href'] = voltar
 }, 1)
 }</script>
+-->
+
+
+  <script>
+(function() {
+    const utmParamQueryString = new URLSearchParams(window.location.search);
+    if (utmParamQueryString.toString()) {
+        var navLinks = document.querySelectorAll('a');
+        navLinks.forEach(function(item) {
+            if (item.href.indexOf('pay.kiwify.com.br') !== -1) {
+                if (item.href.indexOf('?') === -1) {
+                    item.href += '?' + utmParamQueryString.toString();
+                } else {
+                    item.href += '&' + utmParamQueryString.toString();
+                }
+            }
+        });
+    }
+})();
+</script>
+
+
+<script type="text/javascript">(function(window, location) {
+    history.replaceState(null, document.title, location.pathname+"#!/ops");
+    history.pushState(null, document.title, location.pathname);
+
+    window.addEventListener("popstate", function() {
+      if(location.hash === "#!/ops") {
+            history.replaceState(null, document.title, location.pathname);
+            setTimeout(function(){
+
+        location.replace("https://rixplay.com/rix/back");
+
+
+            },0);
+      }
+    }, false);
+}(window, location));</script>
+
 
 <!--
 <script>
