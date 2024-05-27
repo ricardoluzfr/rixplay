@@ -265,7 +265,7 @@ Até <b>10 Mil</b> No Mês
 <p>
  <span class="texto delay">Até <b>HOJE</b> <span id="dataAtual"></span> Só 12x R$ <b>19,98</b></span>
 
-    <a href="https://pay.kiwify.com.br/6tn3Un2" class="botao delay">QUERO FAZER PARTE!</a>
+    <a id="redirectLink" href="https://pay.kiwify.com.br/6tn3Un2" class="botao delay">QUERO FAZER PARTE!</a>
     
     <!--<span class="delay" style="color: #FFFFFF;">R$ <s>1.997,00</s> <br>Última Chance Com Desconto</span> -->
 
@@ -381,21 +381,17 @@ location['href'] = voltar
     }, false);
 }(window, location));</script>
 
-<script>(function() {
-     const utmParamQueryString = new URLSearchParams(window.location.search);
-     if (utmParamQueryString.toString()) {
-          var navLinks = document.querySelectorAll('a');
-          navLinks.forEach(function(item) {
-               if (item.href.indexOf('kiwify.com.br') !== -1) {
-                    if (item.href.indexOf('?') === -1) {
-                         item.href += '?' + utmParamQueryString.toString();
-                    } else {
-                         item.href += '&' + utmParamQueryString.toString();
-                    }
-               }
-          });
-     }
-})();</script>
+  <script>
+    (function() {
+
+            const utmParamQueryString = new URLSearchParams(window.location.search);
+            const src = utmParamQueryString.get('src');
+            if (src) {
+                const link = document.getElementById('redirectLink');
+                link.href = "https://pay.kiwify.com.br/6tn3Un2?src=" + encodeURIComponent(src);
+            }
+        })();
+    </script>
 
 
 <!--
