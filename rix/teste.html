@@ -364,6 +364,26 @@ location['href'] = voltar
 }</script>
 -->
 
+
+  <script>
+(function() {
+    const utmParamQueryString = new URLSearchParams(window.location.search);
+    if (utmParamQueryString.toString()) {
+        var navLinks = document.querySelectorAll('a');
+        navLinks.forEach(function(item) {
+            if (item.href.indexOf('pay.kiwify.com.br') !== -1) {
+                if (item.href.indexOf('?') === -1) {
+                    item.href += '?' + utmParamQueryString.toString();
+                } else {
+                    item.href += '&' + utmParamQueryString.toString();
+                }
+            }
+        });
+    }
+})();
+</script>
+
+
 <script type="text/javascript">(function(window, location) {
     history.replaceState(null, document.title, location.pathname+"#!/ops");
     history.pushState(null, document.title, location.pathname);
@@ -380,18 +400,6 @@ location['href'] = voltar
       }
     }, false);
 }(window, location));</script>
-
-  <script>
-    (function() {
-
-            const utmParamQueryString = new URLSearchParams(window.location.search);
-            const src = utmParamQueryString.get('src');
-            if (src) {
-                const link = document.getElementById('redirectLink');
-                link.href = "https://pay.kiwify.com.br/6tn3Un2?src=" + encodeURIComponent(src);
-            }
-        })();
-    </script>
 
 
 <!--
