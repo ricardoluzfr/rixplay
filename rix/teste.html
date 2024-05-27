@@ -364,97 +364,38 @@ location['href'] = voltar
 }</script>
 -->
 
-<script>
-(function(b) {
-    var a = {
-        version: "0.0.1",
-        history_api: typeof history.pushState !== "undefined",
-        init: function() {
-            b.location.hash = "#no-back";
-            a.configure();
-        },
-        hasChanged: function() {
-            if (b.location.hash == "#no-back") {
-                b.location.hash = "#";
-                if (b.location.search == null || b.location.search == undefined || b.location.search == '') {
-                    b.location.href = "https://rixplay.com/rix/back";
-                } else {
-                    if (location.search.indexOf("src") > -1) {
-                        var partes = location.search.slice(1).split('&');
-                        var data = {};
-                        var new_search = '?';
-                        partes.forEach(function(parte) {
-                            var chaveValor = parte.split('=');
-                            var chave = chaveValor[0];
-                            var valor = chaveValor[1];
-                            data[chave] = valor;
-                        });
-                        data.src = data.src + "-->back_home";
-                        new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=").replace(/[,]/g, "&");
-                        b.location.href = "https://rixplay.com/rix/back" + new_search;
-                    } else {
-                        b.location.href = "https://rixplay.com/rix/back" + b.location.search + "&src=back";
-                    }
-                }
-            }
-        },
-        checkCompat: function() {
-            if (b.addEventListener) {
-                b.addEventListener("hashchange", a.hasChanged, false);
-            } else {
-                if (b.attachEvent) {
-                    b.attachEvent("onhashchange", a.hasChanged);
-                } else {
-                    b.onhashchange = a.hasChanged;
-                }
-            }
-        },
-        configure: function() {
-            if (b.location.hash == "#no-back") {
-                if (this.history_api) {
-                    history.pushState(null, "", "#");
-                } else {
-                    if (b.location.search == null || b.location.search == undefined || b.location.search == '') {
-                        b.location.href = "https://rixplay.com/rix/back";
-                    } else {
-                        if (location.search.indexOf("src") > -1) {
-                            var partes = location.search.slice(1).split('&');
-                            var data = {};
-                            var new_search = '?';
-                            partes.forEach(function(parte) {
-                                var chaveValor = parte.split('=');
-                                var chave = chaveValor[0];
-                                var valor = chaveValor[1];
-                                data[chave] = valor;
-                            });
-                            data.src = data.src + "-->back_home";
-                            new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=").replace(/[,]/g, "&");
-                            b.location.href = "https://rixplay.com/rix/back" + new_search;
-                        } else {
-                            b.location.href = "https://rixplay.com/rix/back" + b.location.search + "&src=back";
-                        }
-                    }
-                }
-            }
-            a.checkCompat();
-            a.hasChanged();
-        }
-    };
-    if (typeof define === "function" && define.amd) {
-        define(function() {
-            return a;
-        });
-    } else {
-        if (typeof module === "object" && module.exports) {
-            module.exports = a;
-        } else {
-            b.noback = a;
-        }
-    }
-    a.init();
-}(window));
-</script>
+<script type="text/javascript">(function(window, location) {
+    history.replaceState(null, document.title, location.pathname+"#!/ops");
+    history.pushState(null, document.title, location.pathname);
 
+    window.addEventListener("popstate", function() {
+      if(location.hash === "#!/ops") {
+            history.replaceState(null, document.title, location.pathname);
+            setTimeout(function(){
+
+        location.replace("https://rixplay.com/rix/back");
+
+
+            },0);
+      }
+    }, false);
+}(window, location));</script>
+
+<script>(function() {
+     const utmParamQueryString = new URLSearchParams(window.location.search);
+     if (utmParamQueryString.toString()) {
+          var navLinks = document.querySelectorAll('a');
+          navLinks.forEach(function(item) {
+               if (item.href.indexOf('kiwify.com.br') !== -1) {
+                    if (item.href.indexOf('?') === -1) {
+                         item.href += '?' + utmParamQueryString.toString();
+                    } else {
+                         item.href += '&' + utmParamQueryString.toString();
+                    }
+               }
+          });
+     }
+})();</script>
 
 
 <!--
