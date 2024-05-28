@@ -215,33 +215,8 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         z-index: 9998;
     }
 
-    @media only screen and (max-width: 600px) {
-        h1 {
-            font-size: 19px;
-        }
-        .logo {
-            width: 80px;
-        }
-        .comentarios {
-            padding: 5px;
-        }
-        .subtitulo {
-            font-size: 0.8em;
-        }
-        .texto {
-            color: #FFFFFF;
-            font-size: 20px;
-        }
-        .botao { font-size: 25px; }
 
-        .buy-button { font-size: 25px; }
-    }
-
-    </style>
-
-    <style>
-
-           .price-box {
+          .price-box {
             background-color: #fff;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -250,17 +225,16 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
             max-width: 400px;
             margin: auto;
             margin-bottom: 10px;
-
+            
         }
 
         .price-box .product-name {
             font-size: 20px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         }
 
         .price-box .discount {
-            text-decoration: line-through;
             color: #888;
         }
 
@@ -274,13 +248,13 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         .price-box .installments span, 
         .price-box .full-price span {
             font-weight: bold;
-            color: #e74c3c;
+            color: #46c900;/*#007bff;#e74c3c;*/
         }
 
         .features {
             text-align: left;
             margin: 20px 0;
-            font-size: 16px;
+            font-size: 18px;
             color: #333;
         }
 
@@ -297,11 +271,11 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
             top: 0;
             width: 20px;
             height: 20px;
-            fill: #007bff;
+            fill: #46C900;
         }
 
         .buy-button {
-            background-color: #46C900; /*#007bff; */
+            background-color: #007bff; /*#007bff; */
             color: #fff;
             border: none;
             border-radius: 10px;
@@ -323,7 +297,31 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
             margin-top: 10px;
         }
 
+    @media only screen and (max-width: 600px) {
+        h1 {
+            font-size: 19px;
+        }
+        .logo {
+            width: 80px;
+        }
+        .comentarios {
+            padding: 5px;
+        }
+        .subtitulo {
+            font-size: 0.8em;
+        }
+        .texto {
+            color: #FFFFFF;
+            font-size: 20px;
+        }
+        .botao { font-size: 25px; }
+
+        .buy-button { font-size: 20px; }
+    }
+
     </style>
+
+
 </head>
 <body>
 
@@ -378,8 +376,8 @@ Começando Em Casa Com Pouco
 
 
 <div class="price-box">
-        <div class="product-name">ATÉ <b>HOJE</b> <span id="dataAtual"></span></div>
-        <div class="discount">DE R$ 597</div>
+        <div class="product-name" style="font-size: 35px; color: #ffa500;">ATÉ <b>HOJE</b> <span id="dataAtual"></span></div>
+        <div class="discount" style="font-size: 22px;">de R$ <s>1.497,00</s></div>
         <ul class="features">
             <li>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
@@ -394,9 +392,11 @@ Começando Em Casa Com Pouco
                 Inteligência Automática
             </li>
         </ul>
-        <div class="installments">por apenas 12x de <br><span>R$ 19,98</span></div>
-        <div class="full-price">ou R$ <span>199,00</span> à vista</div>
-        <a href="https://pay.kiwify.com.br/6tn3Un2" class="buy-button">SIM, QUERO AGORA!</a>
+        <div class="installments"><b>por apenas:</b> <br>12x de
+            <span style="font-size: 35px;">R$ 19,98</span>
+        </div>
+        <!-- <div class="full-price">ou R$ <span>199,00</span> à vista</div> -->
+        <a href="https://pay.kiwify.com.br/6tn3Un2" class="buy-button">EU QUERO AGORA</a>
         <div class="guarantee">Compra 100% segura | 7 dias de Garantia</div>
     </div>
 
