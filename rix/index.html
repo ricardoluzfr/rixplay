@@ -35,7 +35,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
     <style>
         body {
         font-family: "Poppins", "Arial", sans-serif;
-        background-color:#0D1117; /*#0B0D11; 1A73E8*/
+        background-color:#0E141B;/*#0D1117; #0B0D11; 1A73E8*/
         margin: 0;
         padding: 10px;
         text-align: center;
@@ -54,6 +54,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
     }
 
     .comentarios {
+        position: relative;
         max-width: 100%;
         padding-left: 100px;
         padding-right: 100px;
@@ -159,6 +160,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         margin-top: 20px;
     }
     .comment {
+        position: relative;
         margin: 10px auto;
         padding: 15px;
         width: 80%;
@@ -215,9 +217,93 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         z-index: 9998;
     }
 
+
+          .price-box {
+            position: relative;
+            z-index: 9998;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px 10px;
+            text-align: center;
+            max-width: 400px;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: -40px;      
+        }
+
+        .price-box .product-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+
+        .price-box .discount {
+            color: #e74c3c;/*#888;*/
+        }
+
+        .price-box .installments, 
+        .price-box .full-price {
+            font-size: 20px;
+            color: #333;
+            margin: 0px 0;
+        }
+
+        .price-box .installments span, 
+        .price-box .full-price span {
+            font-weight: bold;
+            color: #46c900;/*#007bff;#e74c3c;*/
+        }
+
+        .features {
+            text-align: left;
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .features li {
+            margin-bottom: 0px;
+            list-style-type: none;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .features li svg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            fill: #46C900;
+        }
+
+        .buy-button {
+            background-color: #007bff; /*#007bff; */
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 20px 40px;
+            font-size: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .buy-button:hover {
+            background-color: #46C900;
+        }
+
+        .guarantee {
+            font-size: 12px;
+            color: #888;
+            margin-top: 10px;
+        }
+
     @media only screen and (max-width: 600px) {
         h1 {
-            font-size: 19px;
+            font-size: 21px;
         }
         .logo {
             width: 80px;
@@ -233,9 +319,13 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
             font-size: 20px;
         }
         .botao { font-size: 25px; }
+
+        .buy-button { font-size: 30px; }
     }
 
     </style>
+
+
 </head>
 <body>
 
@@ -254,8 +344,8 @@ ATÉ HOJE <span id="dataAtual"></span>
 <h1>
 Descubra <b>Rápido</b> Como Aumentar<br>
 Sua Renda Em Até <b>10 Salários</b><br>
-Começando Em Casa Com Pouco 
-<br>Que Você Já Sabe...
+Começando Em Casa<!-- Com Pouco 
+<br>Que Você Já Sabe...-->
 </h1>
 
 
@@ -265,38 +355,59 @@ Começando Em Casa Com Pouco
 <div style="width:100%; height: 45px; position: relative; background: transparet; margin-top: -45px;"></div>
 
 <p>
- <span class="texto delay">Até <b>HOJE</b> <span id="dataAtual"></span> Só 12x R$ <b>19,98</b></span>
 
-    <a id="redirectLink" href="https://pay.kiwify.com.br/6tn3Un2" class="botao delay">QUERO FAZER PARTE!</a>
-    
+<a href="#comprar" class="botao delay">QUERO FAZER PARTE!</a>
+
     <!--<span class="delay" style="color: #FFFFFF;">R$ <s>1.997,00</s> <br>Última Chance Com Desconto</span> -->
 
 </div><!-- conteudo -->
 
-<!-- 
-<div class="comentarios">
 
-<div class="delay">
+
+<div class="comentarios delay">
 
 <div class="shoutout-embed" data-widgetTitle="RixPlay (7)" data-widgetId="84d699e7-dee2-4727-b9c1-91e01278c917"></div>
 <script class="shoutout-script" src="https://shoutout.io/static/website/js/embed.js" defer></script>
 
-<div style="z-index: 2; width:100%; height: 60px; position: relative; background: #000000; margin-top: -60px;"></div>
+<div style="z-index: 2; width:100%; height: 60px; position: relative; background: #0E141B; margin-top: -60px;"></div>
 
 </div>
-</div>
--->
-
-
 
 </div><!--comentarios-->
+
+
+<div id="comprar" class="price-box delay">
+        <div class="product-name" style="font-size: 35px; color: #ffa500;">ATÉ <b>HOJE</b> <span id="dataAtual"></span></div>
+        <div class="discount" style="font-size: 22px;">de R$ <s>1.497,00</s></div>
+        <ul class="features">
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
+                Modelo Pronto
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
+                Curso Rápido
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
+                Inteligência Automática
+            </li>
+        </ul>
+        <div class="installments"><b>por apenas:</b> <br>12x de
+            <span style="font-size: 35px;">R$ 19,98</span>
+        </div>
+        <!-- <div class="full-price">ou R$ <span>199,00</span> à vista</div> -->
+        <a href="https://pay.kiwify.com.br/6tn3Un2" class="buy-button">EU QUERO AGORA!</a>
+        <div class="guarantee">Compra Segura | 7 dias de Garantia</div>
+    </div>
+
 
 <div style="font-family: Poppins, Arial, sans-serif;  font-size: 12px; color: #333333; text-decoration:none; padding:0px;">RIX © 2024<br><a target="_blank" style="color: #333333; text-decoration:none;" href="https://rixplay.com/rix/termos">Privacidade | Termos</a></div>
 <p>
 
     </div> <!-- container -->
 
- <!-- Popup -->
+ <!-- Popup 
     <div class="popup" id="exitPopup">
         <p><b><span style="font-size: 2.5em;">ESPERE!</span></b><br>Essa Chance Não Vai Mais Aparecer Pra Você!</p>
         <button class="botaosair" onclick="closePopup()">ASSISTIR AGORA</button>
@@ -304,19 +415,21 @@ Começando Em Casa Com Pouco
         <a href="https://rixplay.com/rix/leia">ou Leia Aqui a Versão Texto</a>
     </div>
 
-    <!-- Overlay -->
+    
     <div class="overlay" id="overlay"></div>
+
+    -->
 
 <script>
  $('.delay').hide();
-         window._wq = window._wq || [];
+          window._wq = window._wq || [];
          _wq.push({
            id: "6vre1ueni7",
            onReady: function(video) {
               video.bind('secondchange', function(s) {
-               if (s >= 528 ) /*529*/
+               if (s >= 1 ) /*529*/
                {
-            $('.delay').fadeIn();
+            $('.delay').fadeIn();            
            }
            
          });
@@ -324,21 +437,13 @@ Começando Em Casa Com Pouco
          });
          
       </script>
-
-
 <!--
-
 <script>    
 setTimeout(function() {
-  $('.delay').fadeIn();
-}, 0 ); /* 540000 9 min*/
+  $('.delay').fadeIn();  
+}, 5000 ); /* 540000 9 min*/
 </script>
-
 -->
-
-
-
-
 
 
   <script>
