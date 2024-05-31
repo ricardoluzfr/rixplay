@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RixPlay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<link rel="preload" href=" " as="document">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '406315182371854');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    <style>
+
+
+        body {
+              font-family: "Poppins", sans-serif;
+/*            font-family: Arial, sans-serif;*/
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+             -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+        }
+
+        html {
+    scroll-behavior: smooth;
+ }
+        
+        .conteudo {
+            max-width: 800px;
+            margin: 0px auto;
+            padding: 10px;
+       
+   
+        }
+
+              
+        h1 {
+            font-size: 2.5em;
+            color: #000000;
+        }
+
+          .destaque {
+        background-color: #ffd700; /* FFCC3C */
+        color: #000000; 
+        padding: 0 5px; 
+    }
+        
+         
+
+.mensagem {
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+}
+      
+
+        @media only screen and (max-width: 600px) {
+        /* Reduz o tamanho da fonte para dispositivos móveis */
+        h1 {
+            font-size: 1.5em;           
+        }
+      }
+
+    </style>
+</head>
+<body>
+
+<div class="mensagem">
+  Compra Quase Concluída
+</div>
+<div class="conteudo">
+  <br>
+    <h1><span class="destaque">OFERTA ÚNICA:</span><p> 
+       Quer Ganhar <u>5X Mais Rápido</u> <br>Em Dólar Também?</h1>
+
+<img src="img/up.png" border="0" width="100%"></img>
+
+<p>
+   <span style="color: #000000; font-size: 20px;">de R$ <s>1.997,00</s> por só 12x R$ 24,90</span>
+<p>
+   
+   <div style="text-align:center">
+          <button id="kiwify-upsell-trigger-aNtzSor" style="background-color:#2353ff;padding:30px 60px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:0px solid #2353ff;font-size:20px;">EU TAMBÉM QUERO!</button>
+          <div id="kiwify-upsell-cancel-trigger" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, só quero menos</div>
+        </div><script> 
+            let nextUpsellURL = "";
+            let nextDownsellURL = "https://rixplay.com/rix/down";</script><script src="https://kiwify-snippets.netlify.app/upsell/upsell.min.js"></script>
+
+
+</div><!-- conteudo-->
+
+
+
+
+<script>document.addEventListener("contextmenu", e => e.preventDefault());</script>
+
+<script>
+var voltar = 'https://rixplay.com/rix/up';
+history['pushState']({}, '', location['href']);
+history['pushState']({}, '', location['href']);
+window['onpopstate'] = function() {
+setTimeout(function() {
+location['href'] = voltar
+}, 1)
+}</script>
+
+</body>
+</html>
+
