@@ -145,7 +145,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         text-decoration: none;
         cursor: pointer;
         margin: auto;
-        margin-top: -50px;
+        margin-top: -60px;
         z-index: 1000;
         position: relative;
     }
@@ -292,7 +292,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
             border: none;
             border-radius: 10px;
             padding: 20px 40px;
-            font-size: 30px;
+            font-size: 25px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
@@ -330,7 +330,7 @@ src="https://www.facebook.com/tr?id=406315182371854&ev=PageView&noscript=1"
         }
         .botao { font-size: 25px; }
 
-        .buy-button { font-size: 28px; }
+        .buy-button { font-size: 18px; }
 
         .topo { width:100%; }
     }
@@ -347,14 +347,14 @@ ATÉ HOJE <span id="dataAtual"></span>
 </div>
 -->
 
-<div class="conteudo">
+<div id="comprar" class="conteudo">
 
     <center>
         <!-- <img class="logo" src="img/logo.jpg" border="0"> -->
     </center>
 
 
-<img class="topo" border="0" src="img/topox.png"></img>
+<img class="topo" border="0" src="img/head.png"></img>
 
         
 <script src="https://fast.wistia.com/embed/medias/6vre1ueni7.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_6vre1ueni7 seo=true videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/6vre1ueni7/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
@@ -370,30 +370,26 @@ ATÉ HOJE <span id="dataAtual"></span>
 </div><!-- conteudo -->
 
 
-<div id="comprar" class="price-box delay">
-
+<div class="price-box delay">
         
-                <div class="product-name" style="font-size: 28px; color: #e74c3c;">ATÉ <b>HOJE</b> <span id="dataAtual"></span></div>
+                <div class="product-name" style="font-size: 26px; color: #e74c3c;"><b>HOJE</b> <span id="dataAtual"></span> GANHE:</div>
         <ul class="features">
             <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
-                Modelo <b>Pronto</b>
+                - Modelo <b>Pronto</b>
             </li>
-        
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
-                Aulas Rápidas
+        <li>            
+                - Seu Produto
+            </li>
+            <li>       
+                - Aulas Rápidas
             </li>    
-                <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 19.4l-7.7-7.7 1.4-1.4L9 16.6l12.3-12.3 1.4 1.4z"/></svg>
-                Seu Produto
-            </li>
+                
         </ul>
         <div class="discount" style="font-size: 22px;">de R$ <s>1.497,00</s> <span class="installments"><b>por só:</b> <br>12x de
             <span style="font-size: 35px;">R$ 19,98</span></div>
   
         <!-- <div class="full-price">ou R$ <span>199,00</span> à vista</div> -->
-        <a href="https://pay.kiwify.com.br/6tn3Un2" class="buy-button">EU QUERO AGORA!</a>
+        <a href="https://pay.kiwify.com.br/6tn3Un2" class="buy-button">QUERO ACESSO AGORA</a>
         <div class="guarantee">Só R$ 0,67 por dia | 7 dias de Garantia</div>
     </div>
 
@@ -432,7 +428,7 @@ ATÉ HOJE <span id="dataAtual"></span>
     -->
 
 <script>
- $('.delay').hide();
+ 
           window._wq = window._wq || [];
          _wq.push({
            id: "6vre1ueni7",
@@ -593,6 +589,7 @@ function getDataAtual() {
     if (mes < 10) {
         mes = '0' + mes; // Adiciona um zero ao mês se ele for menor que 10
     }
+    if (dia < 10) { dia = '0' + dia; }
     var dataFormatada = dia + '/' + mes;
     return dataFormatada;
 }
